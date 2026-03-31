@@ -1,0 +1,10 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774897229
+::res://Assets/::1774892994
+::res://Assets/Fondos/::1774893184
+fondo_1.png::CompressedTexture2D::7775593153178797177::1774892204::1774893184::1::::<><><>0<>0<>1e7acfba3a927372e7aa2ce237e79637<>res://.godot/imported/fondo_1.png-f9b571fe49e296d3cfcbe189b9a407dc.ctex::
+fondo_2.png::CompressedTexture2D::5638120276031639354::1774892011::1774893184::1::::<><><>0<>0<>ab5d46d1d887280942cd9033fb16b5af<>res://.godot/imported/fondo_2.png-b8adc9a7837b962ea280c1ecfadae966.ctex::
+fondo_3.png::CompressedTexture2D::5751008992820876970::1774892766::1774893184::1::::<><><>0<>0<>205bf3f581a7b8faab3b4bfca443cfce<>res://.godot/imported/fondo_3.png-6f78d6f3cd8acf85329c7136d3292bec.ctex::
+::res://Scenes/::1774896668
+::res://Scripts/::1774896675
+jugador_principal.gd::GDScript::7315930446062601341::1774897229::0::1::::<>CharacterBody2D<><>0<>0<><>::

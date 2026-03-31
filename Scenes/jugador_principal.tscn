@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dadd03q2sbjs0"]
+
+[ext_resource type="Script" uid="uid://dch5knil8w2hd" path="res://Scripts/jugador_principal.gd" id="1_tsrk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_devhj"]
+size = Vector2(55.5, 136)
+
+[node name="Jugador_principal" type="CharacterBody2D" unique_id=736185559]
+script = ExtResource("1_tsrk2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2097814169]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=791774825]
+position = Vector2(100, 122)
+shape = SubResource("RectangleShape2D_devhj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=233505459]
+position_smoothing_enabled = true
