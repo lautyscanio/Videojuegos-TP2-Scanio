@@ -1,1 +1,4 @@
+res://villa.tscn
+res://Scenes/jugador_principal.tscn
+res://Scenes/villa.tscn
 res://Scripts/jugador_principal.gd

@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="villa"
+run/main_scene="res://Scenes/villa.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=5000
+window/size/viewport_height=3000
 
 [physics]
 
