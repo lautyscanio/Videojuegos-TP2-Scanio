@@ -3,16 +3,28 @@
 [ext_resource type="Texture2D" uid="uid://di1s5a8p66nq4" path="res://Assets/Fondos/fondo_1.png" id="1_y8v56"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
+a = Vector2(2410, 566)
+b = Vector2(493, 552)
+
 [node name="Villa" type="Node2D" unique_id=1086255128]
 
 [node name="Fondo_villa2" type="ParallaxLayer" parent="." unique_id=1390265316]
 motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
-position = Vector2(13.000004, -111.99999)
-scale = Vector2(0.6113282, 0.37988284)
+position = Vector2(-0.9999991, -2.9999926)
+scale = Vector2(0.94189453, 0.5034179)
 texture = ExtResource("1_y8v56")
 centered = false
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
-position = Vector2(96, 628)
+position = Vector2(80, 1008)
+
+[node name="Camera2D" type="Camera2D" parent="Jugador_principal" unique_id=803189748]
+
+[node name="piso" type="StaticBody2D" parent="." unique_id=2071256521]
+position = Vector2(-486, 452)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=98674495]
+shape = SubResource("SegmentShape2D_y8v56")

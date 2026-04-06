@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ods1bcegkng5"]
+
+[ext_resource type="Script" uid="uid://brl2t0l1f21j" path="res://Scripts/Bala/bala.gd" id="1_4qq6s"]
+[ext_resource type="Texture2D" uid="uid://cono5dmj282o1" path="res://Assets/argentinian-assets-pack-v1.0/bebidas/ferne.png" id="2_melus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_melus"]
+radius = 1.0
+height = 4.0
+
+[node name="bala" type="RigidBody2D" unique_id=1067458265]
+collision_layer = 4
+script = ExtResource("1_4qq6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976641177]
+shape = SubResource("CapsuleShape2D_melus")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=220674802]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_melus")
