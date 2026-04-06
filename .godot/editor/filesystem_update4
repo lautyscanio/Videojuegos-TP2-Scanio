@@ -1,7 +1,4 @@
-res://Scenes/jugador_principal.tscn
-res://Scripts/personje_principal/movimiento.gd
 res://Scenes/villa.tscn
 res://Scripts/Bala/bala.gd
 res://Scripts/personje_principal/disparo.gd
-res://Scenes/bala.tscn
-res://Scripts/personje_principal/jugador_principal.gd
+res://Scenes/jugador_principal.tscn
