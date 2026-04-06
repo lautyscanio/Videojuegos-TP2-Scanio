@@ -13,17 +13,18 @@ b = Vector2(493, 552)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
-position = Vector2(15.999996, 16.000004)
-scale = Vector2(0.92968756, 0.51806647)
+position = Vector2(3.0000153, -3.0000002)
+scale = Vector2(0.6679687, 0.32128912)
 texture = ExtResource("1_y8v56")
 centered = false
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
-position = Vector2(23, 1077)
+position = Vector2(-98, 660)
+rotation = -0.0063096187
 
 [node name="piso" type="StaticBody2D" parent="." unique_id=2071256521]
 position = Vector2(-681, 747)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=98674495]
-position = Vector2(67, -220)
+position = Vector2(2, -647)
 shape = SubResource("SegmentShape2D_y8v56")

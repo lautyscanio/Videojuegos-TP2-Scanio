@@ -347,7 +347,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_devhj"]
-size = Vector2(89, 214)
+size = Vector2(62.5, 179)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0wib"]
 size = Vector2(58, 228)
@@ -357,21 +357,21 @@ script = ExtResource("1_h0wib")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302448020]
 unique_name_in_owner = true
-position = Vector2(188, -254)
-scale = Vector2(3.890625, 3.3515625)
+position = Vector2(163.5, -221.75)
+scale = Vector2(3.5078125, 2.8476563)
 sprite_frames = SubResource("SpriteFrames_e0q55")
 animation = &"disparar"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=791774825]
-position = Vector2(158, -153)
+position = Vector2(144.75, -135.5)
 shape = SubResource("RectangleShape2D_devhj")
 
 [node name="hitbox_golpe" type="Area2D" parent="." unique_id=1646237334]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_golpe" unique_id=1535845469]
-position = Vector2(222, -156)
+position = Vector2(195, -129)
 shape = SubResource("RectangleShape2D_h0wib")
 disabled = true
 

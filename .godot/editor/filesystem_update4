@@ -1,4 +1,5 @@
-res://Scenes/villa.tscn
-res://Scripts/Bala/bala.gd
+res://Scenes/bala.tscn
 res://Scripts/personje_principal/disparo.gd
+res://Scenes/villa.tscn
 res://Scenes/jugador_principal.tscn
+res://Scripts/Bala/bala.gd

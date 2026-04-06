@@ -28,14 +28,19 @@ func _disparar():
 
 	if not %AnimatedSprite2D.animation_finished.is_connected(_en_animacion_terminada):
 		%AnimatedSprite2D.animation_finished.connect(_en_animacion_terminada)
-
+	
+	await get_tree().create_timer(0.5).timeout
 	const bala = preload("res://Scenes/bala.tscn")
 	var nueva_bala: RigidBody2D = bala.instantiate()
 
+	nueva_bala.direccion = _apuntando
+	nueva_bala.z_index = 10
 	get_tree().current_scene.add_child(nueva_bala)
-	nueva_bala.global_position = jugador.global_position + _apuntando * 20
-	nueva_bala.apply_central_impulse(_apuntando * 500)	
-
+	# Uso la posicion del sprite para que la bala salga de donde se ve el personaje
+	var sprite_pos:Vector2 = %AnimatedSprite2D.global_position
+	nueva_bala.global_position = sprite_pos + _apuntando * 50 + Vector2(30, 25)	
+	if _apuntando.x < 0:
+		nueva_bala.get_node("Sprite2D").flip_h = true
 func _en_animacion_terminada():
 	disparando = false
 	%AnimatedSprite2D.animation_finished.disconnect(_en_animacion_terminada)
