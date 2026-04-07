@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://b6n3fxecgyhbn"]
+
+[ext_resource type="Script" uid="uid://cn6nprx2fi05e" path="res://Scripts/menu_principal/seleccion_niveles.gd" id="1_tsxg0"]
+[ext_resource type="Texture2D" uid="uid://db4fnw0c3wg3k" path="res://Assets/Fondos/villa_real.webp" id="2_5sa1p"]
+[ext_resource type="Texture2D" uid="uid://ob1yd8mxgqgh" path="res://Assets/menu/fondo_1.png" id="3_2tr8v"]
+[ext_resource type="Texture2D" uid="uid://d324m1ntbth07" path="res://Assets/menu/candado.png" id="4_kbx52"]
+
+[node name="Seleccion_niveles" type="Control" unique_id=2073824129]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsxg0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1976784415]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1071.0
+texture = ExtResource("2_5sa1p")
+
+[node name="nivel1" type="Button" parent="." unique_id=62241525]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 297.0
+offset_right = 558.0
+offset_bottom = 644.0
+
+[node name="Sprite2D" type="Sprite2D" parent="nivel1" unique_id=2014064217]
+position = Vector2(211.93747, 173.74998)
+scale = Vector2(0.20501706, 0.16625975)
+texture = ExtResource("3_2tr8v")
+
+[node name="nivel2" type="Button" parent="." unique_id=1444995019]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1456.0
+offset_top = 281.0
+offset_right = 1753.0
+offset_bottom = 639.0
+icon = ExtResource("4_kbx52")
+
+[node name="nivel3" type="Button" parent="." unique_id=396575977]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 881.0
+offset_top = 288.0
+offset_right = 1169.0
+offset_bottom = 646.0
+icon = ExtResource("4_kbx52")
+
+[connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="nivel2" to="." method="_on_nivel_2_pressed"]
+[connection signal="pressed" from="nivel3" to="." method="_on_nivel_3_pressed"]

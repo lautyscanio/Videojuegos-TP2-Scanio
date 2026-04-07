@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="villa"
-run/main_scene="res://Scenes/villa.tscn"
+run/main_scene="uid://brhxf2tulrmpa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://b4d6lfl88bord"
 
 [display]
 

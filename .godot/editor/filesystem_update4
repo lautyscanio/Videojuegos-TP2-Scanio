@@ -1,5 +1,7 @@
-res://Scenes/bala.tscn
-res://Scripts/personje_principal/disparo.gd
-res://Scenes/villa.tscn
-res://Scenes/jugador_principal.tscn
-res://Scripts/Bala/bala.gd
+res://Scenes/menu.tscn
+res://Scripts/personje_principal/seleccion_niveles.gd
+res://Scripts/menu_principal/global.gd
+res://Scripts/menu_principal/menu.gd
+res://seleccion_niveles.tscn
+res://Scripts/menu_principal/seleccion_niveles.gd
+res://Scenes/seleccion_niveles.tscn
