@@ -3,9 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://bhfy6sm0n85kk" path="res://Assets/Fondos/fondo4.png" id="1_y8v56"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
 [ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="3_tyepp"]
+[ext_resource type="Script" uid="uid://bkdj65wykpxfj" path="res://Scripts/menu_principal/menu_pausa.gd" id="4_mc778"]
+[ext_resource type="Texture2D" uid="uid://d3ae5auvmooku" path="res://Assets/menu/pausa.png" id="5_x24ru"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
-a = Vector2(2536, 560)
+a = Vector2(2635, 552)
 b = Vector2(-197, 540)
 
 [node name="Villa" type="Node2D" unique_id=1086255128]
@@ -15,12 +17,12 @@ motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
 position = Vector2(2, -108.99999)
-scale = Vector2(1.3946222, 1.5338541)
+scale = Vector2(1.4949129, 1.5338541)
 texture = ExtResource("1_y8v56")
 centered = false
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
-position = Vector2(364, 1064.9999)
+position = Vector2(720, 1087)
 rotation = -0.0063096187
 
 [node name="piso" type="StaticBody2D" parent="." unique_id=2071256521]
@@ -31,16 +33,29 @@ position = Vector2(120, -233)
 shape = SubResource("SegmentShape2D_y8v56")
 
 [node name="Enemigo" parent="." unique_id=925338288 instance=ExtResource("3_tyepp")]
-position = Vector2(838, 1299)
+position = Vector2(121, 893)
 
 [node name="Enemigo2" parent="." unique_id=1469068465 instance=ExtResource("3_tyepp")]
-position = Vector2(1113, 904)
+position = Vector2(1371, 952)
 
 [node name="Enemigo3" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
 position = Vector2(-228, 926)
 
 [node name="Enemigo4" parent="." unique_id=246110794 instance=ExtResource("3_tyepp")]
-position = Vector2(1629, 913)
+position = Vector2(1811, 958)
 
 [node name="Enemigo5" parent="." unique_id=1024254991 instance=ExtResource("3_tyepp")]
 position = Vector2(-631, 893)
+
+[node name="MenuPausa" type="Node" parent="." unique_id=868804484]
+process_mode = 3
+script = ExtResource("4_mc778")
+
+[node name="TextureButton" type="TextureButton" parent="MenuPausa" unique_id=1264759257]
+offset_left = 1553.0
+offset_top = -148.0
+offset_right = 2053.0
+offset_bottom = 352.0
+texture_normal = ExtResource("5_x24ru")
+
+[connection signal="pressed" from="MenuPausa/TextureButton" to="MenuPausa" method="_on_texture_button_pressed"]

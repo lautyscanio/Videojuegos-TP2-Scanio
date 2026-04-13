@@ -336,7 +336,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mfnf3"]
 radius = 94.0
-height = 282.0
+height = 198.0
 
 [node name="Enemigo" unique_id=183401599 instance=ExtResource("1_cj35o")]
 
@@ -348,7 +348,7 @@ animation = &"pegar_1"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1261114428]
-position = Vector2(91, 19)
+position = Vector2(106, 16)
 shape = SubResource("CapsuleShape2D_mfnf3")
 
 [node name="CollisionShape2D" parent="hitbox_enemigo" parent_id_path=PackedInt32Array(1554114582) index="0" unique_id=1436842177]

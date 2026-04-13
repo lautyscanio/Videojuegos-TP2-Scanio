@@ -2,7 +2,7 @@ extends Node
 
 const MIN_SPEED: float = 10
 const MAX_SPEED: float = 350.0
-const JUMP_VELOCITY = -600.0
+const JUMP_VELOCITY = -750.0
 
 var jugador: CharacterBody2D
 
