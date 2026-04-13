@@ -5,10 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://cus58yd4hk32e" path="res://Assets/personaje_principal/Gangsters_3/Shot.png" id="2_axb00"]
 [ext_resource type="Texture2D" uid="uid://dtorur8qxcdqo" path="res://Assets/personaje_principal/Gangsters_3/Idle.png" id="2_xva43"]
 [ext_resource type="Texture2D" uid="uid://814lkwfwyjqu" path="res://Assets/personaje_principal/Gangsters_3/Run.png" id="3_h0wib"]
+[ext_resource type="Texture2D" uid="uid://bu1bjbxjiceku" path="res://Assets/personaje_principal/Gangsters_3/Hurt.png" id="3_jdoni"]
 [ext_resource type="Texture2D" uid="uid://8k2nv6d8jc40" path="res://Assets/personaje_principal/Gangsters_3/Attack.png" id="3_o0qgf"]
 [ext_resource type="Texture2D" uid="uid://coiprvxui5iml" path="res://Assets/personaje_principal/Gangsters_3/Jump.png" id="4_xbar8"]
+[ext_resource type="Texture2D" uid="uid://b1mxqmf712h0w" path="res://Assets/personaje_principal/Gangsters_3/Dead.png" id="5_v1jwb"]
 [ext_resource type="Script" uid="uid://bqkn8c2bh4gbo" path="res://Scripts/personje_principal/golpe.gd" id="6_xbscl"]
 [ext_resource type="Script" uid="uid://coh875yqe6gr4" path="res://Scripts/personje_principal/disparo.gd" id="9_e7iwe"]
+[ext_resource type="Script" uid="uid://df8jl0ovd6d38" path="res://Scripts/Enemigos/slot_enemigo.gd" id="10_e7iwe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5h86"]
 atlas = ExtResource("2_axb00")
@@ -58,6 +61,22 @@ region = Rect2(1280, 0, 128, 128)
 atlas = ExtResource("2_axb00")
 region = Rect2(1408, 0, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x1gf"]
+atlas = ExtResource("3_jdoni")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lsie"]
+atlas = ExtResource("3_jdoni")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4scuk"]
+atlas = ExtResource("3_jdoni")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfild"]
+atlas = ExtResource("3_jdoni")
+region = Rect2(384, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_o0qgf"]
 atlas = ExtResource("2_xva43")
 region = Rect2(0, 0, 128, 128)
@@ -85,6 +104,26 @@ region = Rect2(640, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3int"]
 atlas = ExtResource("2_xva43")
 region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d62x"]
+atlas = ExtResource("5_v1jwb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0msmo"]
+atlas = ExtResource("5_v1jwb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtgo4"]
+atlas = ExtResource("5_v1jwb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gh85"]
+atlas = ExtResource("5_v1jwb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_praym"]
+atlas = ExtResource("5_v1jwb")
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0q55"]
 atlas = ExtResource("3_o0qgf")
@@ -231,6 +270,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1x1gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lsie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4scuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfild")
+}],
+"loop": false,
+"name": &"herido",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_o0qgf")
 }, {
 "duration": 1.0,
@@ -254,6 +310,26 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d62x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0msmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtgo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gh85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_praym")
+}],
+"loop": false,
+"name": &"muerto",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -352,7 +428,7 @@ size = Vector2(62.5, 179)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0wib"]
 size = Vector2(58, 228)
 
-[node name="Jugador_principal" type="CharacterBody2D" unique_id=736185559]
+[node name="Jugador_principal" type="CharacterBody2D" unique_id=736185559 groups=["jugador"]]
 script = ExtResource("1_h0wib")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302448020]
@@ -391,5 +467,18 @@ script = ExtResource("9_e7iwe")
 [node name="Cooldown" type="Timer" parent="Disparo" unique_id=94898420]
 one_shot = true
 
+[node name="Slot_enemigo" type="Node2D" parent="." unique_id=579831660]
+unique_name_in_owner = true
+position = Vector2(145, 0)
+
+[node name="Izq" type="Node2D" parent="Slot_enemigo" unique_id=1029177521]
+position = Vector2(-160, 0)
+script = ExtResource("10_e7iwe")
+
+[node name="Der" type="Node2D" parent="Slot_enemigo" unique_id=519872483]
+position = Vector2(160, 0)
+script = ExtResource("10_e7iwe")
+
+[connection signal="body_entered" from="hitbox_golpe" to="Golpe" method="_on_hitbox_golpe_body_entered"]
 [connection signal="timeout" from="Golpe/Cooldown" to="Golpe" method="_en_espera_terminada"]
 [connection signal="timeout" from="Disparo/Cooldown" to="Disparo" method="_en_espera_terminada"]

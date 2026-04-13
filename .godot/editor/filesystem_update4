@@ -1,7 +1,8 @@
-res://Scenes/menu.tscn
-res://Scripts/personje_principal/seleccion_niveles.gd
-res://Scripts/menu_principal/global.gd
-res://Scripts/menu_principal/menu.gd
-res://seleccion_niveles.tscn
-res://Scripts/menu_principal/seleccion_niveles.gd
-res://Scenes/seleccion_niveles.tscn
+res://enemigo.tscn
+res://Scripts/Enemigos/enemigo.gd
+res://Scenes/villa.tscn
+res://Scenes/enemigo_1.tscn
+res://Scripts/personje_principal/jugador_principal.gd
+res://Scripts/personje_principal/golpe.gd
+res://Scenes/jugador_principal.tscn
+res://Scripts/Bala/bala.gd

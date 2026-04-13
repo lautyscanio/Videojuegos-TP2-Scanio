@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://ejbsou8qtiw5"]
 
-[ext_resource type="Texture2D" uid="uid://di1s5a8p66nq4" path="res://Assets/Fondos/fondo_1.png" id="1_y8v56"]
+[ext_resource type="Texture2D" uid="uid://bhfy6sm0n85kk" path="res://Assets/Fondos/fondo4.png" id="1_y8v56"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
+[ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="3_tyepp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
-a = Vector2(2410, 566)
+a = Vector2(2527, 566)
 b = Vector2(493, 552)
 
 [node name="Villa" type="Node2D" unique_id=1086255128]
@@ -14,7 +15,7 @@ motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
 position = Vector2(3.0000153, -3.0000002)
-scale = Vector2(0.6679687, 0.32128912)
+scale = Vector2(1.34375, 0.95312506)
 texture = ExtResource("1_y8v56")
 centered = false
 
@@ -28,3 +29,6 @@ position = Vector2(-681, 747)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=98674495]
 position = Vector2(2, -647)
 shape = SubResource("SegmentShape2D_y8v56")
+
+[node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
+position = Vector2(1404, 574)

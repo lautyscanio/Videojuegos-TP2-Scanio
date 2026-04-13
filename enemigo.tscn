@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://con6laxxp4tag"]
+
+[ext_resource type="Script" uid="uid://cn341qy26c2aj" path="res://Scripts/Enemigos/enemigo.gd" id="1_becj5"]
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=183401599]
+script = ExtResource("1_becj5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1112720449]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1261114428]
