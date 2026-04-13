@@ -12,6 +12,10 @@
 [ext_resource type="Script" uid="uid://bqkn8c2bh4gbo" path="res://Scripts/personje_principal/golpe.gd" id="6_xbscl"]
 [ext_resource type="Script" uid="uid://coh875yqe6gr4" path="res://Scripts/personje_principal/disparo.gd" id="9_e7iwe"]
 [ext_resource type="Script" uid="uid://df8jl0ovd6d38" path="res://Scripts/Enemigos/slot_enemigo.gd" id="10_e7iwe"]
+[ext_resource type="Texture2D" uid="uid://cwqavn03thbbk" path="res://Assets/menu/corazon.webp" id="13_2oppn"]
+[ext_resource type="FontFile" uid="uid://be4p8ewytpwa2" path="res://Assets/Fuentes/PixelifySans-VariableFont_wght.ttf" id="13_6ak31"]
+[ext_resource type="Script" uid="uid://bfao2fumo3y8q" path="res://Scripts/personje_principal/salud.gd" id="13_v1jwb"]
+[ext_resource type="Script" uid="uid://c3i0dtyo8bo8x" path="res://Scripts/personje_principal/boton_reintentar.gd" id="14_8jd46"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5h86"]
 atlas = ExtResource("2_axb00")
@@ -328,7 +332,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_praym")
 }],
 "loop": false,
-"name": &"muerto",
+"name": &"muerte",
 "speed": 5.0
 }, {
 "frames": [{
@@ -423,31 +427,53 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_devhj"]
-size = Vector2(62.5, 179)
+size = Vector2(97.5, 243)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0wib"]
-size = Vector2(58, 228)
+size = Vector2(170.5, 285)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ak31"]
+bg_color = Color(0.97167593, 0.18518087, 0.18098563, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jd46"]
+bg_color = Color(0.3128455, 0.5000479, 0.32931972, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2oppn"]
+bg_color = Color(0.7090283, 0.5658573, 0.46806097, 0.42352942)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Jugador_principal" type="CharacterBody2D" unique_id=736185559 groups=["jugador"]]
+position = Vector2(243, 21)
 script = ExtResource("1_h0wib")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302448020]
 unique_name_in_owner = true
-position = Vector2(163.5, -221.75)
-scale = Vector2(3.5078125, 2.8476563)
+position = Vector2(206, -283.25)
+scale = Vector2(4.171875, 3.8085938)
 sprite_frames = SubResource("SpriteFrames_e0q55")
-animation = &"disparar"
+animation = &"herido"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=791774825]
-position = Vector2(144.75, -135.5)
+position = Vector2(162.25, -167.5)
 shape = SubResource("RectangleShape2D_devhj")
 
 [node name="hitbox_golpe" type="Area2D" parent="." unique_id=1646237334]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_golpe" unique_id=1535845469]
-position = Vector2(195, -129)
+position = Vector2(169.75, -174.5)
 shape = SubResource("RectangleShape2D_h0wib")
 disabled = true
 
@@ -479,6 +505,89 @@ script = ExtResource("10_e7iwe")
 position = Vector2(160, 0)
 script = ExtResource("10_e7iwe")
 
+[node name="HUD" type="CanvasLayer" parent="." unique_id=27169947]
+
+[node name="BarraSalud" type="ProgressBar" parent="HUD" unique_id=2038890823]
+unique_name_in_owner = true
+offset_left = 79.0
+offset_top = 84.0
+offset_right = 552.0
+offset_bottom = 160.0
+theme_override_styles/background = SubResource("StyleBoxFlat_6ak31")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8jd46")
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD" unique_id=1473072242]
+position = Vector2(70.62499, 120.37502)
+scale = Vector2(0.10996093, 0.11035153)
+texture = ExtResource("13_2oppn")
+
+[node name="pantalla_muerte" type="Control" parent="HUD" unique_id=1534535034]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/pantalla_muerte" unique_id=1943143528]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004166667
+anchor_top = 0.125
+anchor_right = 0.8609375
+anchor_bottom = 0.96481484
+offset_top = -137.0
+offset_right = 275.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.6784314)
+metadata/_edit_use_anchors_ = true
+
+[node name="txt_muerte" type="Label" parent="HUD/pantalla_muerte" unique_id=698747685]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25572917
+anchor_top = 0.30555555
+anchor_right = 0.5932292
+anchor_bottom = 0.42777777
+offset_left = 36.0
+offset_top = -115.0
+offset_right = 250.0
+offset_bottom = -42.0
+theme_override_colors/font_color = Color(0.96267647, 0, 0.08015638, 1)
+theme_override_fonts/font = ExtResource("13_6ak31")
+theme_override_font_sizes/font_size = 170
+text = "GAME OVER"
+metadata/_edit_use_anchors_ = true
+
+[node name="boton_reintentar" type="Button" parent="HUD/pantalla_muerte" unique_id=1171764227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29166666
+anchor_top = 0.61111116
+anchor_right = 0.584375
+anchor_bottom = 0.72962964
+offset_left = 61.0
+offset_top = -20.0
+offset_right = 209.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.49767852, 0.747526, 0.533157, 1)
+theme_override_colors/font_focus_color = Color(0.2987459, 0.49601912, 0.33210313, 1)
+theme_override_fonts/font = ExtResource("13_6ak31")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_2oppn")
+text = "Volver a jugar"
+script = ExtResource("14_8jd46")
+metadata/_edit_use_anchors_ = true
+
+[node name="Salud" type="Node" parent="." unique_id=35381595]
+script = ExtResource("13_v1jwb")
+
 [connection signal="body_entered" from="hitbox_golpe" to="Golpe" method="_on_hitbox_golpe_body_entered"]
 [connection signal="timeout" from="Golpe/Cooldown" to="Golpe" method="_en_espera_terminada"]
 [connection signal="timeout" from="Disparo/Cooldown" to="Disparo" method="_en_espera_terminada"]
+[connection signal="pressed" from="HUD/pantalla_muerte/boton_reintentar" to="HUD/pantalla_muerte/boton_reintentar" method="_on_pressed"]

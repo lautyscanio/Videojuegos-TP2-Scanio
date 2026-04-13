@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cktvo4a8rjekj"]
 
-[ext_resource type="PackedScene" uid="uid://con6laxxp4tag" path="res://enemigo.tscn" id="1_cj35o"]
+[ext_resource type="PackedScene" uid="uid://con6laxxp4tag" path="res://Scenes/enemigo.tscn" id="1_cj35o"]
 [ext_resource type="Texture2D" uid="uid://c0tt70pmhdt6x" path="res://Assets/enemigos/Wild Zombie/Hurt.png" id="2_w3syy"]
 [ext_resource type="Texture2D" uid="uid://np74g4u8ekfc" path="res://Assets/enemigos/Wild Zombie/Idle.png" id="3_fhtb2"]
 [ext_resource type="Texture2D" uid="uid://bqyhe7ubsdfi3" path="res://Assets/enemigos/Wild Zombie/Dead.png" id="4_dphad"]
@@ -335,18 +335,23 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mfnf3"]
-radius = 65.0
-height = 130.0
+radius = 94.0
+height = 282.0
 
 [node name="Enemigo" unique_id=183401599 instance=ExtResource("1_cj35o")]
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1112720449]
-position = Vector2(29.500015, -63.249985)
-scale = Vector2(4.78125, 3.2239587)
+position = Vector2(63.00003, -108.24997)
+scale = Vector2(5.479167, 4.161459)
 sprite_frames = SubResource("SpriteFrames_807bm")
 animation = &"pegar_1"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1261114428]
-position = Vector2(52, 45)
+position = Vector2(91, 19)
 shape = SubResource("CapsuleShape2D_mfnf3")
+
+[node name="CollisionShape2D" parent="hitbox_enemigo" parent_id_path=PackedInt32Array(1554114582) index="0" unique_id=1436842177]
+position = Vector2(151, 12)
+
+[connection signal="body_entered" from="hitbox_enemigo" to="." method="_on_hitbox_enemigo_body_entered"]

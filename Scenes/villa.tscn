@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="3_tyepp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
-a = Vector2(2527, 566)
-b = Vector2(493, 552)
+a = Vector2(2536, 560)
+b = Vector2(-197, 540)
 
 [node name="Villa" type="Node2D" unique_id=1086255128]
 
@@ -14,21 +14,33 @@ b = Vector2(493, 552)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
-position = Vector2(3.0000153, -3.0000002)
-scale = Vector2(1.34375, 0.95312506)
+position = Vector2(2, -108.99999)
+scale = Vector2(1.3946222, 1.5338541)
 texture = ExtResource("1_y8v56")
 centered = false
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
-position = Vector2(-98, 660)
+position = Vector2(364, 1064.9999)
 rotation = -0.0063096187
 
 [node name="piso" type="StaticBody2D" parent="." unique_id=2071256521]
 position = Vector2(-681, 747)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=98674495]
-position = Vector2(2, -647)
+position = Vector2(120, -233)
 shape = SubResource("SegmentShape2D_y8v56")
 
-[node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
-position = Vector2(1404, 574)
+[node name="Enemigo" parent="." unique_id=925338288 instance=ExtResource("3_tyepp")]
+position = Vector2(838, 1299)
+
+[node name="Enemigo2" parent="." unique_id=1469068465 instance=ExtResource("3_tyepp")]
+position = Vector2(1113, 904)
+
+[node name="Enemigo3" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
+position = Vector2(-228, 926)
+
+[node name="Enemigo4" parent="." unique_id=246110794 instance=ExtResource("3_tyepp")]
+position = Vector2(1629, 913)
+
+[node name="Enemigo5" parent="." unique_id=1024254991 instance=ExtResource("3_tyepp")]
+position = Vector2(-631, 893)

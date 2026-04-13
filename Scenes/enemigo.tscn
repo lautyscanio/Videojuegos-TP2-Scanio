@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cn341qy26c2aj" path="res://Scripts/Enemigos/enemigo.gd" id="1_becj5"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwaop"]
+radius = 109.0
+height = 218.0
+
 [node name="Enemigo" type="CharacterBody2D" unique_id=183401599]
 script = ExtResource("1_becj5")
 
@@ -9,3 +13,10 @@ script = ExtResource("1_becj5")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1261114428]
+
+[node name="hitbox_enemigo" type="Area2D" parent="." unique_id=1554114582]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_enemigo" unique_id=1436842177]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_mwaop")

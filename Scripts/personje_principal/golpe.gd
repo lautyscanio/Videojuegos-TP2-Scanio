@@ -3,11 +3,13 @@ extends Node
 var jugador: CharacterBody2D
 var atacando: bool = false
 var puede_atacar: bool = true
+var rango_golpe: float = 300.0
 
 func _ready():
 	jugador = get_parent()
 	if not $Cooldown.timeout.is_connected(_en_espera_terminada):
 		$Cooldown.timeout.connect(_en_espera_terminada)
+
 func _input(event):
 	if not puede_atacar or atacando:
 		return
@@ -21,22 +23,28 @@ func _iniciar_ataque(nombre_animacion: String):
 	puede_atacar = false
 	%AnimatedSprite2D.play(nombre_animacion)
 
-	var col_golpe = %hitbox_golpe.get_node("CollisionShape2D")
 	var lado = -1 if %AnimatedSprite2D.flip_h else 1
-	col_golpe.position.x = abs(col_golpe.position.x) * lado
-	col_golpe.disabled = false
+	_aplicar_daño(lado)
 
 	if not %AnimatedSprite2D.animation_finished.is_connected(_en_animacion_terminada):
 		%AnimatedSprite2D.animation_finished.connect(_en_animacion_terminada)
 
+func _aplicar_daño(lado: int):
+	var origen = %AnimatedSprite2D.global_position
+	var enemigos = get_tree().get_nodes_in_group("enemigo")
+	for enemigo in enemigos:
+		var distancia_x = enemigo.global_position.x - origen.x
+		var distancia_y = abs(enemigo.global_position.y - origen.y)
+		if distancia_y > 300:
+			continue
+		if lado == 1 and distancia_x > -50 and distancia_x < rango_golpe:
+			enemigo.recibir_daño(1)
+		elif lado == -1 and distancia_x < 50 and distancia_x > -rango_golpe:
+			enemigo.recibir_daño(1)
+
 func _en_animacion_terminada():
-	%hitbox_golpe.get_node("CollisionShape2D").disabled = true
 	atacando = false
 	%AnimatedSprite2D.animation_finished.disconnect(_en_animacion_terminada)
 
 func _en_espera_terminada():
 	puede_atacar = true
-	
-func _on_hitbox_golpe_body_entered(body):
-	if body.is_in_group("enemigo"):
-		body.recibir_daño(1)

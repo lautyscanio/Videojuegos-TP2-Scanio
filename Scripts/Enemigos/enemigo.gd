@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+const ITEM_VIDA = preload("res://Scenes/item_vida.tscn")
 @export var vida: int = 3
 @export var velocidad: float = 180.0
 var esta_herido = false
@@ -45,47 +45,70 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		%AnimatedSprite2D.play("idle")
-		%AnimatedSprite2D.flip_h = (jugador.global_position.x - global_position.x) < 0
+		if jugador != null:
+			%AnimatedSprite2D.flip_h = (jugador.global_position.x - global_position.x) < 0
 
 func _atacar():
 	atacando = true
 	puede_atacar = false
 	%AnimatedSprite2D.play(ataques[indice_combo])
 	indice_combo = (indice_combo + 1) % ataques.size()
-	# Hacer daño al jugador en el momento del golpe
-	await get_tree().create_timer(0.25).timeout
-	if not muerto and jugador != null:
-		var distancia = global_position.distance_to(jugador.global_position)
-		if distancia < 200 and jugador.has_method("recibir_daño"):
-			jugador.recibir_daño(1)
+	
+	if has_node("%hitbox_enemigo/CollisionShape2D"):
+		var col_golpe = %hitbox_enemigo.get_node("CollisionShape2D")
+		var lado = -1 if %AnimatedSprite2D.flip_h else 1
+		col_golpe.position.x = abs(col_golpe.position.x) * lado
+		col_golpe.disabled = false
 
 func _en_animacion_terminada():
 	if muerto:
 		return
 	if atacando:
+		if has_node("%hitbox_enemigo/CollisionShape2D"):
+			%hitbox_enemigo.get_node("CollisionShape2D").disabled = true
 		atacando = false
 		await get_tree().create_timer(0.5).timeout
 		puede_atacar = true
 
 func recibir_daño(cantidad):
 	if muerto: return
+	
 	vida -= cantidad
 	
 	if vida <= 0:
 		muerto = true
 		atacando = false
 		esta_herido = false
-		if mi_slot != null:
+		velocity = Vector2.ZERO
+		
+		var item = ITEM_VIDA.instantiate()
+		item.global_position = global_position
+		item.global_position.y += 20 
+		get_tree().current_scene.call_deferred("add_child", item)
+		
+		if mi_slot != null and jugador != null:
 			jugador.liberar_slot(self)
+			
 		%AnimatedSprite2D.play("muerte")
 		$CollisionShape2D.set_deferred("disabled", true)
+		
+		if has_node("%hitbox_enemigo/CollisionShape2D"):
+			get_node("%hitbox_enemigo/CollisionShape2D").set_deferred("disabled", true)
+			
 		await get_tree().create_timer(1.5).timeout
 		queue_free()
 	else:
 		indice_combo = 0
 		esta_herido = true
-		velocity.x = 0
+		velocity = Vector2.ZERO
 		%AnimatedSprite2D.play("herido")
+		
 		await get_tree().create_timer(0.3).timeout
+		
 		esta_herido = false
 		puede_atacar = true
+
+func _on_hitbox_enemigo_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
+		if body.has_method("recibir_daño"):
+			body.recibir_daño(1)

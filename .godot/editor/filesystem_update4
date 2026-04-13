@@ -1,8 +1,10 @@
-res://enemigo.tscn
-res://Scripts/Enemigos/enemigo.gd
-res://Scenes/villa.tscn
 res://Scenes/enemigo_1.tscn
-res://Scripts/personje_principal/jugador_principal.gd
-res://Scripts/personje_principal/golpe.gd
-res://Scenes/jugador_principal.tscn
+res://Scenes/enemigo.tscn
 res://Scripts/Bala/bala.gd
+res://Scenes/bala.tscn
+res://Scenes/villa.tscn
+res://Scripts/Enemigos/enemigo.gd
+res://Scripts/personje_principal/item_vida.gd
+res://Scripts/personje_principal/jugador_principal.gd
+res://Scenes/item_vida.tscn
+res://Scripts/personje_principal/salud.gd

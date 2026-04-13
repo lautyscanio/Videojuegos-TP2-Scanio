@@ -36,6 +36,7 @@ func _disparar():
 	nueva_bala.direccion = _apuntando
 	nueva_bala.z_index = 10
 	get_tree().current_scene.add_child(nueva_bala)
+	# Uso la posicion del sprite para que la bala salga de donde se ve el personaje
 	var sprite_pos:Vector2 = %AnimatedSprite2D.global_position
 	nueva_bala.global_position = sprite_pos + _apuntando * 50 + Vector2(30, 25)	
 	if _apuntando.x < 0:
