@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b6cnfou8agjnw"]
+
+[ext_resource type="Script" uid="uid://bm6kbal8pl35j" path="res://Scripts/curaciones/curacion_empanada.gd" id="1_pqtnt"]
+[ext_resource type="Texture2D" uid="uid://4ayss2e1ii3c" path="res://Assets/argentinian-assets-pack-v1.0/comida/empanada.png" id="1_yp2gc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqtnt"]
+radius = 26.683329
+
+[node name="curacion_empanada" type="Area2D" unique_id=86838935]
+script = ExtResource("1_pqtnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=664109265]
+position = Vector2(-132, 83.5)
+scale = Vector2(6.625, 7.083333)
+texture = ExtResource("1_yp2gc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=847541922]
+position = Vector2(-134, 81)
+shape = SubResource("CircleShape2D_pqtnt")

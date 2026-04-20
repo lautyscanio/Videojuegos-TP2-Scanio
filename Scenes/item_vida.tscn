@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://sjcb1u1bqap4"]
+[gd_scene format=3 uid="uid://mj56jlxmf4b6"]
 
-[ext_resource type="Script" uid="uid://datvypstriekg" path="res://Scripts/personje_principal/item_vida.gd" id="1_7oden"]
+[ext_resource type="Script" path="res://Scripts/personje_principal/item_vida.gd" id="1_7oden"]
 [ext_resource type="Texture2D" uid="uid://noof7ygbioj8" path="res://Assets/argentinian-assets-pack-v1.0/comida/golosina-01.png" id="2_7oden"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xy63f"]
 radius = 22.0
 height = 56.0
 
-[node name="item_vida" type="Area2D" unique_id=1107139228]
+[node name="cuarcion_rhodesia" type="Area2D" unique_id=1107139228]
 script = ExtResource("1_7oden")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=708943583]

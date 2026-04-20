@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://8v3kv7vmmse"]
+
+[ext_resource type="Script" uid="uid://cn6nprx2fi05e" path="res://Scripts/menu_principal/seleccion_niveles.gd" id="1_hsb15"]
+[ext_resource type="Texture2D" uid="uid://d324m1ntbth07" path="res://Assets/menu/candado.png" id="1_yfyw1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hsb15"]
+load_path = "res://.godot/imported/fondo_3.jpeg-c80c9d6b32a387cfc6ed28f698d67562.ctex"
+
+[node name="Button" type="Button" unique_id=1688117685]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_hsb15")
+nivel = null
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=726533597]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 172.0
+offset_right = 1564.0
+offset_bottom = 1057.0
+texture = SubResource("CompressedTexture2D_hsb15")
+expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=595708107]
+position = Vector2(920, 562)
+texture = ExtResource("1_yfyw1")
+
+[node name="Label" type="Label" parent="." unique_id=918421187]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

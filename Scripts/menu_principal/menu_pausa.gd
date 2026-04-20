@@ -1,7 +1,6 @@
 extends Node
 
 
-
 func _on_texture_button_pressed() -> void:
 	var esta_pausado = get_tree().paused
 	

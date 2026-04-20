@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://ejbsou8qtiw5"]
+
+[ext_resource type="Script" uid="uid://dff7rmp7gnfxv" path="res://Scripts/nivel_1/nivel_1.gd" id="1_h7xi1"]
+[ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
+[ext_resource type="Texture2D" uid="uid://vyii0bvtkqms" path="res://Assets/Fondos/fondo_4.png" id="2_x24ru"]
+[ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="3_tyepp"]
+[ext_resource type="Texture2D" uid="uid://6fbfmd4j3n6f" path="res://Assets/Fondos/fondo_3.jpeg" id="3_x24ru"]
+[ext_resource type="PackedScene" uid="uid://b6cnfou8agjnw" path="res://Scenes/curacion_empanada.tscn" id="4_h7xi1"]
+[ext_resource type="PackedScene" uid="uid://i3iym7bfrvgf" path="res://Scenes/enemigo_2.tscn" id="7_7f4fd"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5kan0"]
+a = Vector2(-524, -78)
+b = Vector2(-480, 1045)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mpvac"]
+a = Vector2(4112, -122)
+b = Vector2(4109, 1077)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7f4fd"]
+a = Vector2(2037, 1069)
+b = Vector2(2040, -89)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uohps"]
+a = Vector2(4979, -111)
+b = Vector2(-649, -81)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qespj"]
+a = Vector2(-1413, 1091)
+b = Vector2(-1381, -95)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
+a = Vector2(4673, 552)
+b = Vector2(-197, 540)
+
+[node name="Villa" type="Node2D" unique_id=1086255128]
+script = ExtResource("1_h7xi1")
+
+[node name="fondo1" type="Sprite2D" parent="." unique_id=1193923795]
+position = Vector2(2, -108.99999)
+scale = Vector2(1.4949129, 1.5338541)
+texture = ExtResource("2_x24ru")
+centered = false
+
+[node name="fondo2" type="Sprite2D" parent="." unique_id=540746507]
+position = Vector2(3084.5, 467.5)
+scale = Vector2(0.73814654, 0.7892287)
+texture = ExtResource("3_x24ru")
+
+[node name="pared_enemigo" type="StaticBody2D" parent="." unique_id=738043178]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_enemigo" unique_id=561720208]
+shape = SubResource("SegmentShape2D_5kan0")
+
+[node name="curacion_empanada" parent="." unique_id=86838935 instance=ExtResource("4_h7xi1")]
+position = Vector2(2525, 871)
+
+[node name="pared_der" type="StaticBody2D" parent="." unique_id=1566535344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_der" unique_id=1122078845]
+shape = SubResource("SegmentShape2D_mpvac")
+
+[node name="pared_medio" type="StaticBody2D" parent="." unique_id=1488799695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_medio" unique_id=609136976]
+shape = SubResource("SegmentShape2D_7f4fd")
+
+[node name="techo" type="StaticBody2D" parent="." unique_id=1510742431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="techo" unique_id=927181239]
+shape = SubResource("SegmentShape2D_uohps")
+
+[node name="pared_izq" type="StaticBody2D" parent="." unique_id=1420396103]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_izq" unique_id=1129674310]
+position = Vector2(714, -36)
+shape = SubResource("SegmentShape2D_qespj")
+
+[node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
+position = Vector2(720, 1087)
+rotation = -0.0063096187
+
+[node name="piso" type="StaticBody2D" parent="." unique_id=2071256521]
+position = Vector2(-681, 747)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=98674495]
+position = Vector2(120, -233)
+shape = SubResource("SegmentShape2D_y8v56")
+
+[node name="Enemigo" parent="." unique_id=925338288 instance=ExtResource("3_tyepp")]
+position = Vector2(121, 893)
+
+[node name="Enemigo2" parent="." unique_id=1469068465 instance=ExtResource("3_tyepp")]
+position = Vector2(1371, 952)
+
+[node name="Enemigo3" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
+position = Vector2(-197, 947)
+
+[node name="Enemigo4" parent="." unique_id=246110794 instance=ExtResource("3_tyepp")]
+position = Vector2(1811, 958)
+
+[node name="Enemigo5" parent="." unique_id=1024254991 instance=ExtResource("3_tyepp")]
+position = Vector2(-440, 940)
+
+[node name="Enemigo9" parent="." unique_id=1101460009 instance=ExtResource("7_7f4fd")]
+position = Vector2(-568, 970)
+"daño_ataque" = 1
+
+[node name="Enemigo10" parent="." unique_id=1400937603 instance=ExtResource("7_7f4fd")]
+position = Vector2(4012, 981)
+"daño_ataque" = 1

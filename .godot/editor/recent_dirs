@@ -1,14 +1,17 @@
-res://Assets/menu/
-res://Scripts/menu_principal/
-res://Assets/argentinian-assets-pack-v1.0/comida/
+res://Scripts/nivel_1/
 res://Scenes/
+res://Assets/Fondos/
+res://Assets/menu/
+res://Scripts/Enemigos/
+res://Assets/enemigos/BattingGirl_Download Free/Sprite Sheet/
+res://Scripts/curaciones/
+res://Assets/argentinian-assets-pack-v1.0/comida/
+res://Scripts/menu_principal/
 res://Scripts/personje_principal/
 res://Assets/argentinian-assets-pack-v1.0/bebidas/
 res://Assets/Fuentes/
 res://Assets/personaje_principal/Gangsters_3/
 res://Assets/enemigos/Wild Zombie/
 res://Assets/enemigos/Zombie Man/
-res://Scripts/Enemigos/
 res://
-res://Assets/Fondos/
 res://Scripts/Bala/

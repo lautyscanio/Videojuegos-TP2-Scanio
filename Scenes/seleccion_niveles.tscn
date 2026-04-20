@@ -30,21 +30,21 @@ offset_right = 558.0
 offset_bottom = 644.0
 
 [node name="Sprite2D" type="Sprite2D" parent="nivel1" unique_id=2014064217]
-position = Vector2(211.93747, 173.74998)
+position = Vector2(211.93747, 190.75)
 scale = Vector2(0.20501706, 0.16625975)
 texture = ExtResource("3_2tr8v")
 
 [node name="texto1" type="Label" parent="nivel1" unique_id=2117785883]
 layout_mode = 0
 offset_left = 127.0
-offset_top = 355.0
+offset_top = 367.0
 offset_right = 320.0
-offset_bottom = 440.0
+offset_bottom = 452.0
 theme_override_fonts/font = ExtResource("4_5sa1p")
 theme_override_font_sizes/font_size = 70
 text = "Nivel 1"
 
-[node name="nivel2" type="Button" parent="." unique_id=1444995019]
+[node name="nivel3" type="Button" parent="." unique_id=1444995019]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 1456.0
@@ -52,37 +52,48 @@ offset_top = 281.0
 offset_right = 1753.0
 offset_bottom = 639.0
 icon = ExtResource("4_kbx52")
+icon_alignment = 1
+expand_icon = true
 
-[node name="texto2" type="Label" parent="nivel2" unique_id=1763255470]
+[node name="texto2" type="Label" parent="nivel3" unique_id=1763255470]
 layout_mode = 0
 offset_left = -537.0
-offset_top = 372.0
+offset_top = 382.0
 offset_right = -331.0
-offset_bottom = 457.0
+offset_bottom = 467.0
 theme_override_fonts/font = ExtResource("4_5sa1p")
 theme_override_font_sizes/font_size = 70
 text = "Nivel 2"
 
-[node name="texto2" type="Label" parent="nivel2/texto2" unique_id=1484331099]
+[node name="texto2" type="Label" parent="nivel3/texto2" unique_id=1484331099]
 layout_mode = 0
 offset_left = 579.0
-offset_top = -36.0
+offset_top = -2.0
 offset_right = 795.0
-offset_bottom = 137.0
+offset_bottom = 171.0
 theme_override_fonts/font = ExtResource("4_5sa1p")
 theme_override_font_sizes/font_size = 70
 text = "Nivel 3
 (BOSS)"
 
-[node name="nivel3" type="Button" parent="." unique_id=396575977]
+[node name="Sprite2D" type="Sprite2D" parent="nivel3" unique_id=2102802096]
+position = Vector2(147, 196)
+scale = Vector2(0.20501706, 0.16625975)
+
+[node name="nivel2" type="Button" parent="." unique_id=396575977]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 881.0
-offset_top = 288.0
-offset_right = 1169.0
-offset_bottom = 646.0
+offset_left = 858.0
+offset_top = 304.0
+offset_right = 1146.0
+offset_bottom = 662.0
 icon = ExtResource("4_kbx52")
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="nivel2" unique_id=1085868898]
+position = Vector2(158.99997, 173.99998)
+scale = Vector2(0.20501706, 0.16625975)
 
 [connection signal="pressed" from="nivel1" to="." method="_on_nivel_1_pressed"]
-[connection signal="pressed" from="nivel2" to="." method="_on_nivel_2_pressed"]
-[connection signal="pressed" from="nivel3" to="." method="_on_nivel_3_pressed"]
+[connection signal="pressed" from="nivel3" to="." method="_on_nivel_2_pressed"]
+[connection signal="pressed" from="nivel2" to="." method="_on_nivel_3_pressed"]

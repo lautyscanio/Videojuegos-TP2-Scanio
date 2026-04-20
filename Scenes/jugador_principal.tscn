@@ -16,6 +16,8 @@
 [ext_resource type="FontFile" uid="uid://be4p8ewytpwa2" path="res://Assets/Fuentes/PixelifySans-VariableFont_wght.ttf" id="13_6ak31"]
 [ext_resource type="Script" uid="uid://bfao2fumo3y8q" path="res://Scripts/personje_principal/salud.gd" id="13_v1jwb"]
 [ext_resource type="Script" uid="uid://c3i0dtyo8bo8x" path="res://Scripts/personje_principal/boton_reintentar.gd" id="14_8jd46"]
+[ext_resource type="Script" uid="uid://bkdj65wykpxfj" path="res://Scripts/menu_principal/menu_pausa.gd" id="16_g8omj"]
+[ext_resource type="Texture2D" uid="uid://d3ae5auvmooku" path="res://Assets/menu/pausa.png" id="17_x1c22"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5h86"]
 atlas = ExtResource("2_axb00")
@@ -429,6 +431,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_devhj"]
 size = Vector2(97.5, 243)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oppn"]
+size = Vector2(77, 177.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0wib"]
 size = Vector2(170.5, 285)
 
@@ -468,6 +473,13 @@ speed_scale = 2.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=791774825]
 position = Vector2(162.25, -167.5)
 shape = SubResource("RectangleShape2D_devhj")
+
+[node name="hitbox_salto" type="Area2D" parent="." unique_id=1689361052]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_salto" unique_id=1602723005]
+position = Vector2(164, -249)
+shape = SubResource("RectangleShape2D_2oppn")
 
 [node name="hitbox_golpe" type="Area2D" parent="." unique_id=1646237334]
 unique_name_in_owner = true
@@ -584,10 +596,28 @@ text = "Volver a jugar"
 script = ExtResource("14_8jd46")
 metadata/_edit_use_anchors_ = true
 
+[node name="MenuPausa" type="Node" parent="HUD" unique_id=1242096761]
+process_mode = 3
+script = ExtResource("16_g8omj")
+
+[node name="TextureButton" type="TextureButton" parent="HUD/MenuPausa" unique_id=304486213]
+offset_left = 1553.0
+offset_top = -148.0
+offset_right = 2053.0
+offset_bottom = 352.0
+texture_normal = ExtResource("17_x1c22")
+
 [node name="Salud" type="Node" parent="." unique_id=35381595]
 script = ExtResource("13_v1jwb")
 
-[connection signal="body_entered" from="hitbox_golpe" to="Golpe" method="_on_hitbox_golpe_body_entered"]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1472653295]
+limit_left = 0
+limit_top = 0
+limit_right = 2000
+limit_bottom = 1000
+
+[connection signal="body_entered" from="hitbox_golpe" to="." method="_on_hitbox_golpe_body_entered"]
 [connection signal="timeout" from="Golpe/Cooldown" to="Golpe" method="_en_espera_terminada"]
 [connection signal="timeout" from="Disparo/Cooldown" to="Disparo" method="_en_espera_terminada"]
 [connection signal="pressed" from="HUD/pantalla_muerte/boton_reintentar" to="HUD/pantalla_muerte/boton_reintentar" method="_on_pressed"]
+[connection signal="pressed" from="HUD/MenuPausa/TextureButton" to="HUD/MenuPausa" method="_on_texture_button_pressed"]

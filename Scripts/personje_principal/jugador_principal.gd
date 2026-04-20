@@ -3,6 +3,7 @@ class_name JugadorPrincipal
 
 var muerto = false
 @onready var slots_enemigos = $%Slot_enemigo.get_children()
+@export var daño_ataque: int = 1
 
 func _ready():
 	muerto = false
@@ -31,3 +32,10 @@ func liberar_slot(enemigo):
 	for slot in slots_enemigos:
 		if slot.ocupante == enemigo:
 			slot.liberar_slot()
+
+
+func _on_hitbox_enemigo_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jugador"):
+		
+		if body.has_method("recibir_daño"):
+			body.recibir_daño(daño_ataque)

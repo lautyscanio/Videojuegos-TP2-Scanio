@@ -2,6 +2,8 @@ extends CharacterBody2D
 const ITEM_VIDA = preload("res://Scenes/item_vida.tscn")
 @export var vida: int = 3
 @export var velocidad: float = 180.0
+@export var daño_ataque: int = 1
+@export var distancia_ataque: float = 120.0
 var esta_herido = false
 
 var jugador
@@ -29,7 +31,7 @@ func _physics_process(delta):
 		var direccion = sign(distancia)
 		var dist_al_jugador = abs(global_position.x - jugador.global_position.x)
 
-		if abs(distancia) > 5 and dist_al_jugador > 120:
+		if abs(distancia) > 5 and dist_al_jugador > distancia_ataque:
 			velocity.x = direccion * velocidad
 			%AnimatedSprite2D.play("walk")
 			%AnimatedSprite2D.flip_h = direccion < 0
@@ -53,6 +55,7 @@ func _atacar():
 	puede_atacar = false
 	%AnimatedSprite2D.play(ataques[indice_combo])
 	indice_combo = (indice_combo + 1) % ataques.size()
+		
 	
 	if has_node("%hitbox_enemigo/CollisionShape2D"):
 		var col_golpe = %hitbox_enemigo.get_node("CollisionShape2D")
@@ -111,4 +114,4 @@ func recibir_daño(cantidad):
 func _on_hitbox_enemigo_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
 		if body.has_method("recibir_daño"):
-			body.recibir_daño(1)
+			body.recibir_daño(daño_ataque)

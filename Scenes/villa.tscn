@@ -1,25 +1,79 @@
-[gd_scene format=3 uid="uid://ejbsou8qtiw5"]
+[gd_scene format=3 uid="uid://6awwt4e1yxbb"]
 
-[ext_resource type="Texture2D" uid="uid://bhfy6sm0n85kk" path="res://Assets/Fondos/fondo4.png" id="1_y8v56"]
+[ext_resource type="Script" uid="uid://c6h35wf0fjolg" path="res://Scripts/nivel_1/villa.gd" id="1_h7xi1"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
+[ext_resource type="Texture2D" uid="uid://vyii0bvtkqms" path="res://Assets/Fondos/fondo_4.png" id="2_x24ru"]
 [ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="3_tyepp"]
-[ext_resource type="Script" uid="uid://bkdj65wykpxfj" path="res://Scripts/menu_principal/menu_pausa.gd" id="4_mc778"]
-[ext_resource type="Texture2D" uid="uid://d3ae5auvmooku" path="res://Assets/menu/pausa.png" id="5_x24ru"]
+[ext_resource type="Texture2D" uid="uid://6fbfmd4j3n6f" path="res://Assets/Fondos/fondo_3.jpeg" id="3_x24ru"]
+[ext_resource type="PackedScene" uid="uid://b6cnfou8agjnw" path="res://Scenes/curacion_empanada.tscn" id="4_h7xi1"]
+[ext_resource type="PackedScene" uid="uid://i3iym7bfrvgf" path="res://Scenes/enemigo_2.tscn" id="7_7f4fd"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5kan0"]
+a = Vector2(-524, -78)
+b = Vector2(-480, 1045)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mpvac"]
+a = Vector2(4112, -122)
+b = Vector2(4109, 1077)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7f4fd"]
+a = Vector2(2037, 1069)
+b = Vector2(2040, -89)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uohps"]
+a = Vector2(4979, -111)
+b = Vector2(-649, -81)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qespj"]
+a = Vector2(-1413, 1091)
+b = Vector2(-1381, -95)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_y8v56"]
-a = Vector2(2635, 552)
+a = Vector2(4673, 552)
 b = Vector2(-197, 540)
 
 [node name="Villa" type="Node2D" unique_id=1086255128]
+script = ExtResource("1_h7xi1")
 
-[node name="Fondo_villa2" type="ParallaxLayer" parent="." unique_id=1390265316]
-motion_mirroring = Vector2(1024, 0)
+[node name="fondo2" type="Sprite2D" parent="." unique_id=540746507]
+position = Vector2(3084.5, 467.5)
+scale = Vector2(0.73814654, 0.7892287)
+texture = ExtResource("3_x24ru")
 
-[node name="Sprite2D" type="Sprite2D" parent="Fondo_villa2" unique_id=1193923795]
+[node name="fondo1" type="Sprite2D" parent="." unique_id=1193923795]
 position = Vector2(2, -108.99999)
 scale = Vector2(1.4949129, 1.5338541)
-texture = ExtResource("1_y8v56")
+texture = ExtResource("2_x24ru")
 centered = false
+
+[node name="pared_enemigo" type="StaticBody2D" parent="." unique_id=738043178]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_enemigo" unique_id=561720208]
+shape = SubResource("SegmentShape2D_5kan0")
+
+[node name="curacion_empanada" parent="." unique_id=86838935 instance=ExtResource("4_h7xi1")]
+position = Vector2(2525, 871)
+
+[node name="pared_der" type="StaticBody2D" parent="." unique_id=1566535344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_der" unique_id=1122078845]
+shape = SubResource("SegmentShape2D_mpvac")
+
+[node name="pared_medio" type="StaticBody2D" parent="." unique_id=1488799695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_medio" unique_id=609136976]
+shape = SubResource("SegmentShape2D_7f4fd")
+
+[node name="techo" type="StaticBody2D" parent="." unique_id=1510742431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="techo" unique_id=927181239]
+shape = SubResource("SegmentShape2D_uohps")
+
+[node name="pared_izq" type="StaticBody2D" parent="." unique_id=1420396103]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_izq" unique_id=1129674310]
+position = Vector2(714, -36)
+shape = SubResource("SegmentShape2D_qespj")
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("2_tyepp")]
 position = Vector2(720, 1087)
@@ -39,23 +93,16 @@ position = Vector2(121, 893)
 position = Vector2(1371, 952)
 
 [node name="Enemigo3" parent="." unique_id=183401599 instance=ExtResource("3_tyepp")]
-position = Vector2(-228, 926)
+position = Vector2(-197, 947)
 
 [node name="Enemigo4" parent="." unique_id=246110794 instance=ExtResource("3_tyepp")]
 position = Vector2(1811, 958)
 
 [node name="Enemigo5" parent="." unique_id=1024254991 instance=ExtResource("3_tyepp")]
-position = Vector2(-631, 893)
+position = Vector2(-440, 940)
 
-[node name="MenuPausa" type="Node" parent="." unique_id=868804484]
-process_mode = 3
-script = ExtResource("4_mc778")
+[node name="Enemigo9" parent="." unique_id=1101460009 instance=ExtResource("7_7f4fd")]
+position = Vector2(-568, 970)
 
-[node name="TextureButton" type="TextureButton" parent="MenuPausa" unique_id=1264759257]
-offset_left = 1553.0
-offset_top = -148.0
-offset_right = 2053.0
-offset_bottom = 352.0
-texture_normal = ExtResource("5_x24ru")
-
-[connection signal="pressed" from="MenuPausa/TextureButton" to="MenuPausa" method="_on_texture_button_pressed"]
+[node name="Enemigo10" parent="." unique_id=1400937603 instance=ExtResource("7_7f4fd")]
+position = Vector2(3032, 992)
