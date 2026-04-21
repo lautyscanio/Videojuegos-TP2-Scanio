@@ -39,6 +39,6 @@ func _avanzar_oleada():
 		
 func _ganar_nivel():	
 	nivel_terminado = true
-	Global.nivel_desbloqueado = 2 
+	Global.nivel_desbloqueado = 3 
 	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://Scenes/seleccion_niveles.tscn")

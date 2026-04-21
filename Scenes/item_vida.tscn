@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mj56jlxmf4b6"]
 
-[ext_resource type="Script" path="res://Scripts/personje_principal/item_vida.gd" id="1_7oden"]
+[ext_resource type="Script" uid="uid://b4s45qjn2cx61" path="res://Scripts/personje_principal/item_vida.gd" id="1_7oden"]
 [ext_resource type="Texture2D" uid="uid://noof7ygbioj8" path="res://Assets/argentinian-assets-pack-v1.0/comida/golosina-01.png" id="2_7oden"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xy63f"]

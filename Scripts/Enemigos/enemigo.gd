@@ -1,8 +1,8 @@
 extends CharacterBody2D
-const ITEM_VIDA = preload("res://Scenes/item_vida.tscn")
-@export var vida: int = 3
+@export var escena_item: PackedScene
+@export var vida: float = 3
 @export var velocidad: float = 180.0
-@export var daño_ataque: int = 1
+@export var daño_ataque: float = 1
 @export var distancia_ataque: float = 120.0
 var esta_herido = false
 
@@ -36,6 +36,13 @@ func _physics_process(delta):
 			%AnimatedSprite2D.play("walk")
 			%AnimatedSprite2D.flip_h = direccion < 0
 			move_and_slide()
+			for i in get_slide_collision_count():
+				var choque = get_slide_collision(i)
+				if choque.get_collider() and choque.get_collider().is_in_group("jugador"):
+					velocity.x = 0
+					if puede_atacar:
+						_atacar()
+					break
 		else:
 			velocity.x = 0
 			%AnimatedSprite2D.flip_h = (jugador.global_position.x - global_position.x) < 0
@@ -84,7 +91,7 @@ func recibir_daño(cantidad):
 		esta_herido = false
 		velocity = Vector2.ZERO
 		
-		var item = ITEM_VIDA.instantiate()
+		var item = escena_item.instantiate()
 		item.global_position = global_position
 		item.global_position.y += 20 
 		get_tree().current_scene.call_deferred("add_child", item)

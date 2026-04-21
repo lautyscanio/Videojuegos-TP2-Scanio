@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var pared_medio = $pared_medio
 @onready var pared_enemigo = $pared_enemigo
-
+@onready var flecha = $flecha_avanzar
 var oleada_avanzada = false
 var nivel_terminado = false
 
@@ -35,6 +35,10 @@ func _avanzar_oleada():
 	var jugador = get_tree().get_first_node_in_group("jugador")
 	if jugador and jugador.has_node("Camera2D"):
 		jugador.get_node("Camera2D").limit_right = 4105 
+		
+	flecha.show() 
+	await get_tree().create_timer(3.5).timeout 
+	flecha.hide()
 		
 func _ganar_nivel():	
 	nivel_terminado = true

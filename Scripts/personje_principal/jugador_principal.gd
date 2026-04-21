@@ -3,7 +3,7 @@ class_name JugadorPrincipal
 
 var muerto = false
 @onready var slots_enemigos = $%Slot_enemigo.get_children()
-@export var daño_ataque: int = 1
+@export var daño_ataque: float = 1
 
 func _ready():
 	muerto = false

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cktvo4a8rjekj"]
 
 [ext_resource type="PackedScene" uid="uid://con6laxxp4tag" path="res://Scenes/enemigo.tscn" id="1_cj35o"]
+[ext_resource type="PackedScene" uid="uid://mj56jlxmf4b6" path="res://Scenes/item_vida.tscn" id="2_fhtb2"]
 [ext_resource type="Texture2D" uid="uid://c0tt70pmhdt6x" path="res://Assets/enemigos/Wild Zombie/Hurt.png" id="2_w3syy"]
 [ext_resource type="Texture2D" uid="uid://np74g4u8ekfc" path="res://Assets/enemigos/Wild Zombie/Idle.png" id="3_fhtb2"]
 [ext_resource type="Texture2D" uid="uid://bqyhe7ubsdfi3" path="res://Assets/enemigos/Wild Zombie/Dead.png" id="4_dphad"]
@@ -339,6 +340,7 @@ radius = 94.0
 height = 198.0
 
 [node name="Enemigo" unique_id=183401599 instance=ExtResource("1_cj35o")]
+escena_item = ExtResource("2_fhtb2")
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1112720449]
 position = Vector2(63.00003, -108.24997)

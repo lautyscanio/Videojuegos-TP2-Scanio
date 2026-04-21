@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://con6laxxp4tag" path="res://Scenes/enemigo.tscn" id="1_8cryk"]
 [ext_resource type="Texture2D" uid="uid://c83f03ylmygcu" path="res://Assets/enemigos/BattingGirl_Download Free/Sprite Sheet/BattingGirl_Hurt-Sheet.png" id="2_0qgdp"]
+[ext_resource type="PackedScene" uid="uid://doylqf2ylrxfm" path="res://Scenes/curacion_fernet.tscn" id="2_8cryk"]
 [ext_resource type="Texture2D" uid="uid://s1wqa2ab4xn2" path="res://Assets/enemigos/BattingGirl_Download Free/Sprite Sheet/BattingGirl_Idle-Sheet.png" id="3_8cryk"]
 [ext_resource type="Texture2D" uid="uid://cl2uq6mak6ad2" path="res://Assets/enemigos/BattingGirl_Download Free/Sprite Sheet/BattingGirl_attack01-Sheet.png" id="4_klwie"]
 [ext_resource type="Texture2D" uid="uid://2w56kmw3sf0w" path="res://Assets/enemigos/BattingGirl_Download Free/Sprite Sheet/BattingGirl_attack02-Sheet.png" id="5_3aktb"]
@@ -447,9 +448,9 @@ radius = 166.0
 height = 344.0
 
 [node name="Enemigo" unique_id=183401599 instance=ExtResource("1_8cryk")]
-vida = 5
-"daño_ataque" = 2
-distancia_ataque = 250.0
+escena_item = ExtResource("2_8cryk")
+vida = 5.0
+"daño_ataque" = 2.0
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1112720449]
 position = Vector2(63.00003, -108.24997)

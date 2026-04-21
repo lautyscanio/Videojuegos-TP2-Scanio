@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b6mtlx6g4uskf"]
+
+[ext_resource type="Texture2D" uid="uid://d0yhe82mmvyoq" path="res://Assets/Fondos/flecha.png" id="1_tjo2j"]
+
+[node name="flecha_avanzar" type="CanvasLayer" unique_id=1826817434]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1432522605]
+position = Vector2(1697, 715)
+scale = Vector2(0.6785003, 0.47700012)
+texture = ExtResource("1_tjo2j")

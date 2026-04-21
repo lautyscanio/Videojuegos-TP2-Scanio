@@ -97,22 +97,33 @@ position = Vector2(570, 915)
 
 [node name="Enemigo9" parent="." unique_id=1361255567 instance=ExtResource("6_mgy73")]
 position = Vector2(134, 951)
+vida = 3.0
+"daño_ataque" = 1.0
 
 [node name="Enemigo9" parent="Enemigo9" unique_id=310574457 instance=ExtResource("6_mgy73")]
 position = Vector2(3571, 37)
-"daño_ataque" = 1
+vida = 3.0
+"daño_ataque" = 1.0
 
 [node name="Enemigo10" parent="." unique_id=1741145351 instance=ExtResource("6_mgy73")]
 position = Vector2(-339, 944)
+vida = 3.0
+"daño_ataque" = 1.0
 
 [node name="Enemigo4" parent="." unique_id=409918565 instance=ExtResource("5_k5g52")]
 position = Vector2(3175, 970)
 
 [node name="Enemigo12" parent="." unique_id=603220415 instance=ExtResource("6_mgy73")]
 position = Vector2(-605, 963)
+vida = 3.0
+"daño_ataque" = 1.0
 
 [node name="Enemigo13" parent="." unique_id=1496853791 instance=ExtResource("6_mgy73")]
 position = Vector2(2416, 988)
+vida = 3.0
+"daño_ataque" = 1.0
 
 [node name="Enemigo14" parent="." unique_id=1987983813 instance=ExtResource("6_mgy73")]
 position = Vector2(2914, 989)
+vida = 3.0
+"daño_ataque" = 1.0

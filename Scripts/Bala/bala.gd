@@ -14,6 +14,6 @@ func _on_body_entered(body):
 		return
 		
 	if body.is_in_group("enemigo") and body.has_method("recibir_daño"):
-		body.recibir_daño(1)
+		body.recibir_daño(0.75)
 		
 	queue_free()

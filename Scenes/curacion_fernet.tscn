@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://doylqf2ylrxfm"]
+
+[ext_resource type="Texture2D" uid="uid://db6516x7eqvdb" path="res://Assets/argentinian-assets-pack-v1.0/bebidas/esto-no-es-coca-papi-con-espuma.png" id="1_ofw6v"]
+[ext_resource type="Script" uid="uid://0rb7ix0r5nqp" path="res://Scripts/curaciones/curacion_fernet.gd" id="1_yiihn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yiihn"]
+radius = 29.0
+height = 94.0
+
+[node name="curacion_fernet" type="Area2D" unique_id=1353814551]
+position = Vector2(3, -60)
+script = ExtResource("1_yiihn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=372110772]
+position = Vector2(-3.999999, -28)
+scale = Vector2(3.1764705, 3.1200006)
+texture = ExtResource("1_ofw6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1779626360]
+position = Vector2(-5, -27)
+shape = SubResource("CapsuleShape2D_yiihn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

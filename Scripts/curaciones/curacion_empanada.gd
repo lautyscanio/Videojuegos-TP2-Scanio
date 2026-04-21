@@ -13,6 +13,4 @@ func _on_body_entered(body):
 
 			var cantidad_cura = salud_node.vida_maxima / 2
 			body.curar(cantidad_cura)
-			
-		
 			queue_free()

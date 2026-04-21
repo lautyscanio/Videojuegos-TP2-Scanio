@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://6awwt4e1yxbb"]
+[gd_scene format=3 uid="uid://dcqjry8qi06mp"]
 
 [ext_resource type="Script" uid="uid://c6h35wf0fjolg" path="res://Scripts/nivel_1/villa.gd" id="1_h7xi1"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="2_tyepp"]
