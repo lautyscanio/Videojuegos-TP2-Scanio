@@ -247,7 +247,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"herido",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -456,7 +456,7 @@ vida = 5.0
 position = Vector2(63.00003, -108.24997)
 scale = Vector2(5.479167, 4.161459)
 sprite_frames = SubResource("SpriteFrames_807bm")
-animation = &"pegar_1"
+animation = &"herido"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1261114428]

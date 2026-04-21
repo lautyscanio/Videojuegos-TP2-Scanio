@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dicfayy11ibdk"]
+
+[ext_resource type="FontFile" uid="uid://be4p8ewytpwa2" path="res://Assets/Fuentes/PixelifySans-VariableFont_wght.ttf" id="1_stvtu"]
+[ext_resource type="Script" uid="uid://b2vdaaj8swlf4" path="res://Scenes/escena_final.gd" id="1_xs7cl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs7cl"]
+bg_color = Color(0.4470659, 0.61914796, 0.78106934, 1)
+
+[node name="escena_final" type="Control" unique_id=396423059]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xs7cl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2141506664]
+layout_mode = 0
+offset_right = 1929.0
+offset_bottom = 1083.0
+color = Color(0.015398995, 0.015398999, 0.015398998, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1610324196]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 52.0
+offset_right = 1881.0
+offset_bottom = 742.0
+theme_override_fonts/font = ExtResource("1_stvtu")
+theme_override_font_sizes/font_size = 50
+text = "¡MISON CUMPLIDA!
+
+Despues de meterse en lo más profundo de la villa 31, luchar contra cirujas protectores del gran linyera ,  el empresario finalmente logro su cometido.  En un combate epico, lleno de botellas de fernet  y  cajas de termidor, logro derrotarlo  y  recupero lo que por derecho le pertenecia y le habian robado al salir de la estacion de Retiro.
+
+La mitica moneda de un peso volvio a sus manos. Ahora, con su capital intacto, puede retirarse de la zona y volver a sus negocios. Se puede decir que se hizo justicia por primera vez en la gloriosa Argentina."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1117375342]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 856.0
+offset_right = 1322.0
+offset_bottom = 1000.0
+theme_override_fonts/font = ExtResource("1_stvtu")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_xs7cl")
+text = "volver al menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

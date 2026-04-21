@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://qnm0c0ayin21"]
+
+[ext_resource type="Texture2D" uid="uid://bn8nfw1cmosao" path="res://Assets/Fondos/fondo_1.jpeg" id="1_5dm08"]
+[ext_resource type="PackedScene" uid="uid://b4t0v5t3m16dm" path="res://Scenes/boss.tscn" id="2_jxqql"]
+[ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="3_df6ib"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5dm08"]
+a = Vector2(2481, 560)
+b = Vector2(550, 561)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jxqql"]
+a = Vector2(4112, -122)
+b = Vector2(4109, 1077)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_df6ib"]
+a = Vector2(-715, 1114)
+b = Vector2(-711, 24)
+
+[node name="nivel_3" type="Node2D" unique_id=879215856]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=924976043]
+position = Vector2(962.5001, 510.50003)
+scale = Vector2(0.6900144, 0.7253989)
+texture = ExtResource("1_5dm08")
+
+[node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("2_jxqql")]
+position = Vector2(1615, 834)
+
+[node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("3_df6ib")]
+position = Vector2(-28, 1081)
+
+[node name="piso" type="StaticBody2D" parent="." unique_id=641245999]
+position = Vector2(-681, 747)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=542692625]
+position = Vector2(145, -268)
+shape = SubResource("SegmentShape2D_5dm08")
+
+[node name="pared_der" type="StaticBody2D" parent="." unique_id=1935053122]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_der" unique_id=1900010085]
+position = Vector2(-2193, 66)
+shape = SubResource("SegmentShape2D_jxqql")
+
+[node name="pared_izq" type="StaticBody2D" parent="." unique_id=1236033007]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared_izq" unique_id=70389200]
+position = Vector2(714, -36)
+shape = SubResource("SegmentShape2D_df6ib")

@@ -76,7 +76,7 @@ position = Vector2(714, -36)
 shape = SubResource("SegmentShape2D_sselb")
 
 [node name="Jugador_principal" parent="." unique_id=736185559 instance=ExtResource("4_pot7g")]
-position = Vector2(1078, 1087)
+position = Vector2(1229.9999, 1102.0001)
 rotation = -0.0063096187
 
 [node name="piso" type="StaticBody2D" parent="." unique_id=1061929832]
@@ -87,16 +87,16 @@ position = Vector2(120, -233)
 shape = SubResource("SegmentShape2D_f5q35")
 
 [node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("5_k5g52")]
-position = Vector2(870, 888)
+position = Vector2(673, 953)
 
 [node name="Enemigo2" parent="." unique_id=1641592921 instance=ExtResource("5_k5g52")]
-position = Vector2(1669, 908)
+position = Vector2(1752, 908)
 
 [node name="Enemigo3" parent="." unique_id=2022872455 instance=ExtResource("5_k5g52")]
-position = Vector2(570, 915)
+position = Vector2(292, 938)
 
 [node name="Enemigo9" parent="." unique_id=1361255567 instance=ExtResource("6_mgy73")]
-position = Vector2(134, 951)
+position = Vector2(11, 975)
 vida = 3.0
 "daño_ataque" = 1.0
 

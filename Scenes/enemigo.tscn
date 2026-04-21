@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cn341qy26c2aj" path="res://Scripts/Enemigos/enemigo.gd" id="1_becj5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mwaop"]
-radius = 128.0
-height = 290.0
+radius = 165.0
+height = 500.0
 
 [node name="Enemigo" type="CharacterBody2D" unique_id=183401599]
 script = ExtResource("1_becj5")
