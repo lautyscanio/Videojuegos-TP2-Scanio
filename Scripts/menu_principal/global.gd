@@ -1,3 +1,3 @@
 extends Node
 
-var nivel_desbloqueado: int = 3
+var nivel_desbloqueado: int = 1
