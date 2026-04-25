@@ -614,7 +614,7 @@ script = ExtResource("13_v1jwb")
 limit_left = 0
 limit_top = 0
 limit_right = 2000
-limit_bottom = 1000
+limit_bottom = 1110
 
 [connection signal="body_entered" from="hitbox_golpe" to="." method="_on_hitbox_golpe_body_entered"]
 [connection signal="timeout" from="Golpe/Cooldown" to="Golpe" method="_en_espera_terminada"]

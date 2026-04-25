@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cono5dmj282o1" path="res://Assets/argentinian-assets-pack-v1.0/bebidas/ferne.png" id="2_melus"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_melus"]
-radius = 7.0
-height = 50.0
+radius = 13.0
+height = 88.0
 
 [node name="bala" type="RigidBody2D" unique_id=1067458265]
 z_index = 10
+position = Vector2(-18, -5)
 collision_layer = 4
 gravity_scale = 0.0
 contact_monitor = true
@@ -16,13 +17,14 @@ max_contacts_reported = 1
 script = ExtResource("1_4qq6s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976641177]
+position = Vector2(18, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_melus")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=220674802]
-position = Vector2(0.024999678, 1.3000007)
+position = Vector2(19.4945, 5.93463)
 rotation = 1.5707964
-scale = Vector2(0.8607142, 0.8875)
+scale = Vector2(1.5228039, 1.6987289)
 texture = ExtResource("2_melus")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

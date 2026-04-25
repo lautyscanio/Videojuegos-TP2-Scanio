@@ -372,7 +372,7 @@ corner_radius_bottom_left = 12
 
 [node name="Enemigo" unique_id=183401599 instance=ExtResource("1_0154r")]
 script = ExtResource("2_q76ad")
-distancia_disparo = 1000.0
+distancia_disparo = 1500.0
 escena_item = ExtResource("3_lel8w")
 vida = 25.0
 velocidad = 220.0

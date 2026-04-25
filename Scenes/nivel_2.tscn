@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bw68siy3l0u01"]
 
-[ext_resource type="Texture2D" uid="uid://6fbfmd4j3n6f" path="res://Assets/Fondos/fondo_3.jpeg" id="1_amwks"]
 [ext_resource type="Script" uid="uid://5w1yjqfgj16l" path="res://Scripts/nivel_1/nivel_2.gd" id="1_psj36"]
+[ext_resource type="Texture2D" uid="uid://d2g7kd116718o" path="res://Assets/Fondos/fondo_5.png" id="2_2wi6x"]
 [ext_resource type="Texture2D" uid="uid://vyii0bvtkqms" path="res://Assets/Fondos/fondo_4.png" id="2_psj36"]
 [ext_resource type="PackedScene" uid="uid://b6cnfou8agjnw" path="res://Scenes/curacion_empanada.tscn" id="3_2wi6x"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="4_pot7g"]
 [ext_resource type="PackedScene" uid="uid://cktvo4a8rjekj" path="res://Scenes/enemigo_1.tscn" id="5_k5g52"]
 [ext_resource type="PackedScene" uid="uid://i3iym7bfrvgf" path="res://Scenes/enemigo_2.tscn" id="6_mgy73"]
+[ext_resource type="PackedScene" uid="uid://b6mtlx6g4uskf" path="res://Scenes/flecha_avanzar.tscn" id="8_pot7g"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_paidj"]
 a = Vector2(-524, -78)
@@ -36,9 +37,9 @@ b = Vector2(-197, 540)
 script = ExtResource("1_psj36")
 
 [node name="fondo2" type="Sprite2D" parent="." unique_id=1466279195]
-position = Vector2(3084.5, 467.5)
-scale = Vector2(0.73814654, 0.7892287)
-texture = ExtResource("1_amwks")
+position = Vector2(3076.5002, 467.31378)
+scale = Vector2(0.73814654, 0.78165865)
+texture = ExtResource("2_2wi6x")
 
 [node name="fondo1" type="Sprite2D" parent="." unique_id=234265073]
 position = Vector2(2, -108.99999)
@@ -88,42 +89,37 @@ shape = SubResource("SegmentShape2D_f5q35")
 
 [node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("5_k5g52")]
 position = Vector2(673, 953)
+vida = 2.0
 
 [node name="Enemigo2" parent="." unique_id=1641592921 instance=ExtResource("5_k5g52")]
 position = Vector2(1752, 908)
+vida = 2.0
 
 [node name="Enemigo3" parent="." unique_id=2022872455 instance=ExtResource("5_k5g52")]
 position = Vector2(292, 938)
+vida = 2.0
 
 [node name="Enemigo9" parent="." unique_id=1361255567 instance=ExtResource("6_mgy73")]
 position = Vector2(11, 975)
-vida = 3.0
-"daño_ataque" = 1.0
+vida = 4.0
 
 [node name="Enemigo9" parent="Enemigo9" unique_id=310574457 instance=ExtResource("6_mgy73")]
-position = Vector2(3571, 37)
-vida = 3.0
-"daño_ataque" = 1.0
+position = Vector2(3571, 6)
 
 [node name="Enemigo10" parent="." unique_id=1741145351 instance=ExtResource("6_mgy73")]
 position = Vector2(-339, 944)
-vida = 3.0
-"daño_ataque" = 1.0
+vida = 4.0
 
 [node name="Enemigo4" parent="." unique_id=409918565 instance=ExtResource("5_k5g52")]
-position = Vector2(3175, 970)
+position = Vector2(3175, 968)
 
 [node name="Enemigo12" parent="." unique_id=603220415 instance=ExtResource("6_mgy73")]
 position = Vector2(-605, 963)
-vida = 3.0
-"daño_ataque" = 1.0
 
 [node name="Enemigo13" parent="." unique_id=1496853791 instance=ExtResource("6_mgy73")]
-position = Vector2(2416, 988)
-vida = 3.0
-"daño_ataque" = 1.0
+position = Vector2(2416, 987)
 
 [node name="Enemigo14" parent="." unique_id=1987983813 instance=ExtResource("6_mgy73")]
-position = Vector2(2914, 989)
-vida = 3.0
-"daño_ataque" = 1.0
+position = Vector2(2914, 984)
+
+[node name="flecha_avanzar" parent="." unique_id=1826817434 instance=ExtResource("8_pot7g")]

@@ -7,7 +7,7 @@ func _ready():
 		%nivel2.disabled = false
 		%nivel2.icon = null 
 		var sprite_n2 = %nivel2.get_node("Sprite2D")
-		sprite_n2.texture = preload("res://Assets/Fondos/fondo4.png") 
+		sprite_n2.texture = preload("res://Assets/Fondos/fondo_4.png") 
 		sprite_n2.show() 
 
 	if Global.nivel_desbloqueado < 3:

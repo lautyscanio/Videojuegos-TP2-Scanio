@@ -21,10 +21,10 @@ color = Color(0.015398995, 0.015398999, 0.015398998, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1610324196]
 layout_mode = 0
-offset_left = 53.0
-offset_top = 52.0
-offset_right = 1881.0
-offset_bottom = 742.0
+offset_left = 45.0
+offset_top = 46.0
+offset_right = 1888.0
+offset_bottom = 988.0
 theme_override_fonts/font = ExtResource("1_stvtu")
 theme_override_font_sizes/font_size = 50
 text = "¡MISON CUMPLIDA!

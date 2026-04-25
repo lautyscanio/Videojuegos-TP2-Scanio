@@ -1,12 +1,3 @@
-res://Scenes/boss.tscn
-res://Scripts/Bala/bala_enemigo.gd
 res://Scenes/nivel_3.tscn
-res://Scenes/jugador_principal.tscn
-res://Scripts/Enemigos/boss.gd
-res://Scripts/curaciones/un_peso.gd
-res://Scenes/escena_final.gd
-res://Scenes/escena_final.tscn
-res://Scenes/un_peso.tscn
 res://Scripts/menu_principal/global.gd
-res://Scenes/curacion_empanada.tscn
-res://Scenes/nivel_2.tscn
+res://Scenes/bala.tscn

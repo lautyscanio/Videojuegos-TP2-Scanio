@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qnm0c0ayin21"]
 
-[ext_resource type="Texture2D" uid="uid://bn8nfw1cmosao" path="res://Assets/Fondos/fondo_1.jpeg" id="1_5dm08"]
+[ext_resource type="Texture2D" uid="uid://v1ycuicoe1n5" path="res://Assets/Fondos/fondo_boss.jpg.png" id="1_5dm08"]
 [ext_resource type="PackedScene" uid="uid://b4t0v5t3m16dm" path="res://Scenes/boss.tscn" id="2_jxqql"]
 [ext_resource type="PackedScene" uid="uid://dadd03q2sbjs0" path="res://Scenes/jugador_principal.tscn" id="3_df6ib"]
 
@@ -19,8 +19,8 @@ b = Vector2(-711, 24)
 [node name="nivel_3" type="Node2D" unique_id=879215856]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=924976043]
-position = Vector2(962.5001, 510.50003)
-scale = Vector2(0.6900144, 0.7253989)
+position = Vector2(946.50006, 529.49994)
+scale = Vector2(0.705091, 0.688151)
 texture = ExtResource("1_5dm08")
 
 [node name="Enemigo" parent="." unique_id=183401599 instance=ExtResource("2_jxqql")]
