@@ -5,7 +5,7 @@ Este es un juego que armé en Godot 4. Se trata de un empresario de traje que se
 La cosa es asi: a este empresario le sacaron la unica moneda de un peso que tenia encima. El tipo, por puro orgullo y para recuperar su capital, se manda a lo mas profundo del barrio a buscar al **Gran Linyera**. En su busqueda tiene que enfrentar a todos los cirujas protectores del gran linyera. Al final, despues de una pelea epica, recupera su peso y se puede ir tranquilo de vuelta a la oficina con su moneda.
 
 ## Cómo se juega
-* **Caminar y saltar:** Usás las flechas del teclado (⬅️ ➡️ y ⬆️ para saltar).
+* **Caminar y saltar:** Usás **A** para correr a la izquierda, **D** para correr a la derecha y **W** para saltar.
 * **Pegar:** Con la tecla **Q** pegás un batazo.
 * **Disparar:** Con la tecla **E** tirás botellas de Fernet.
 * **Curaciones:** Cada que matas a un enemigo, depende que tan fuerte sea suelta una curacion diferente.
