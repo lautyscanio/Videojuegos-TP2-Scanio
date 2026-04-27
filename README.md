@@ -24,3 +24,6 @@ Use de base el tutorial de **The GameDev** (https://www.youtube.com/playlist?lis
 ## Los dibujos (Assets)
 * **Cosas Argentinas:** Son del pack Argentinian Assets Pack v1.0.
 * **Personajes:** Al empresario y a los fisuras los arme con imagenes de los packs de CraftPix (las colecciones de Gangsters).
+
+## Testing
+*  En cuanto al juego opino que tuve una buena idea de diseño, divertida para el argentino, ademas fue sencillo encontrar los assets ya que habia un pack que ya tenia todo. En cuanto la jugabilidad, no me parece el juego mas divertido del mundo, siento que lo que lo hace interesante es el tema y los assets ya que es bastante monotono, tiene solo dos tipos de enemigos y un boss. El nivel es medio, vas a perder un par de veces pero se le agarra la mano rapido. Me hubiese gustado que sea mas fluido, y no haberme complicado tanto con el desarrollo, que me llevo demasiado tiempo. Para la proxima no voy a ser tan ambicioso.
