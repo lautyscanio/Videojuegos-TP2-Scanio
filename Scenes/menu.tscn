@@ -77,10 +77,10 @@ expand_icon = true
 
 [node name="nombre_azul" type="Label" parent="." unique_id=971875048]
 layout_mode = 0
-offset_left = 135.0
-offset_top = 50.0
-offset_right = 637.0
-offset_bottom = 123.0
+offset_left = 565.0
+offset_top = 109.0
+offset_right = 1067.0
+offset_bottom = 182.0
 theme_override_colors/font_color = Color(0.18039216, 0.6666667, 0.79607844, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.8666667)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -91,10 +91,10 @@ text = "Un cheto perdido"
 
 [node name="nombre_amarillo" type="Label" parent="." unique_id=965829778]
 layout_mode = 0
-offset_left = 644.0
-offset_top = 49.0
-offset_right = 828.0
-offset_bottom = 122.0
+offset_left = 1074.0
+offset_top = 108.0
+offset_right = 1258.0
+offset_bottom = 181.0
 theme_override_colors/font_color = Color(0.8453434, 0.72971606, 3.85046e-07, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_wwsa2")
@@ -104,10 +104,10 @@ text = "en el"
 
 [node name="nombre_azul2" type="Label" parent="." unique_id=1321162068]
 layout_mode = 0
-offset_left = 809.0
-offset_top = 48.0
-offset_right = 1180.0
-offset_bottom = 197.0
+offset_left = 1239.0
+offset_top = 107.0
+offset_right = 1610.0
+offset_bottom = 256.0
 theme_override_colors/font_color = Color(0.1799874, 0.6682143, 0.79515636, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_wwsa2")

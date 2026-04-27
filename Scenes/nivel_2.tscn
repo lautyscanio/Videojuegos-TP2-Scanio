@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b6mtlx6g4uskf" path="res://Scenes/flecha_avanzar.tscn" id="8_pot7g"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_paidj"]
-a = Vector2(-524, -78)
-b = Vector2(-480, 1045)
+a = Vector2(-599, -112)
+b = Vector2(-589, 1066)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3qbs7"]
 a = Vector2(4112, -122)
@@ -26,12 +26,12 @@ a = Vector2(4979, -111)
 b = Vector2(-649, -81)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sselb"]
-a = Vector2(-1413, 1091)
-b = Vector2(-1381, -95)
+a = Vector2(-1768, 1107)
+b = Vector2(-1667, -40)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_f5q35"]
 a = Vector2(4673, 552)
-b = Vector2(-197, 540)
+b = Vector2(-1068, 534)
 
 [node name="nivel_2" type="Node2D" unique_id=697891890]
 script = ExtResource("1_psj36")
@@ -100,24 +100,24 @@ position = Vector2(292, 938)
 vida = 2.0
 
 [node name="Enemigo9" parent="." unique_id=1361255567 instance=ExtResource("6_mgy73")]
-position = Vector2(11, 975)
+position = Vector2(-163, 986)
 vida = 4.0
 
 [node name="Enemigo9" parent="Enemigo9" unique_id=310574457 instance=ExtResource("6_mgy73")]
 position = Vector2(3571, 6)
 
 [node name="Enemigo10" parent="." unique_id=1741145351 instance=ExtResource("6_mgy73")]
-position = Vector2(-339, 944)
+position = Vector2(-424, 972)
 vida = 4.0
 
 [node name="Enemigo4" parent="." unique_id=409918565 instance=ExtResource("5_k5g52")]
 position = Vector2(3175, 968)
 
 [node name="Enemigo12" parent="." unique_id=603220415 instance=ExtResource("6_mgy73")]
-position = Vector2(-605, 963)
+position = Vector2(2413, 983)
 
 [node name="Enemigo13" parent="." unique_id=1496853791 instance=ExtResource("6_mgy73")]
-position = Vector2(2416, 987)
+position = Vector2(-841, 960)
 
 [node name="Enemigo14" parent="." unique_id=1987983813 instance=ExtResource("6_mgy73")]
 position = Vector2(2914, 984)

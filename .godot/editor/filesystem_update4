@@ -1,1 +1,4 @@
-res://Scenes/bala.tscn
+res://Scenes/menu.tscn
+res://Scenes/nivel_2.tscn
+res://Scripts/nivel_1/nivel_2.gd
+res://Scripts/menu_principal/global.gd
